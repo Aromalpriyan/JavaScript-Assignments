@@ -28,7 +28,7 @@
 
 <p>13. What is the difference between single quotes, double quotes, and backticks in JavaScript?<p>
 
-## Output
+## ✅ Output
 
 #### 1. JavaScript was created by Brendan Eich in 1995.
 #### 2. The first web browser was WorldWideWeb in 1990.
@@ -198,7 +198,7 @@ b. 56
 c. False   
 d. 34
 
-## Output
+## ✅ Output
 **Part A: Descriptive type**
 #### 1. A variable is a container used to store data values that can be used and manipulated within a program.
 #### 2. <ul>
@@ -327,7 +327,7 @@ discountPercentage = ((MRP – sellingPrice) * 100) / MRP
 <p>6. Create a BMI Calculator 
 BMI = Weight(kg) / (height(m) * height(m))<p>
 
-## Output
+## ✅ Output
 
 #### 1.
 ```
