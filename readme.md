@@ -463,7 +463,7 @@ What will the output of the above code be?
 ________________________________________
 21. What will be the output of the below code?
 
-![image](./Picture1.png)
+![image](./Picture1(Ass04).png)
 ________________________________________
  22. Write a chained if / else-if statement to fill in the following conditions  
 val  < 5  =>  Tiny  
@@ -808,6 +808,116 @@ switch(role) {
 #### 24. Y
 
 #### 25. Wed
+
+## 05 Assignment
+### String Methods
+**1. Find String Length**  
+Write a program to find the length of a string using .length.  
+
+**2. Convert to Uppercase and Lowercase**  
+Take a string and print it in both uppercase (.toUpperCase()) and lowercase (.toLowerCase()).
+
+**3. Check if a String Contains a Word**  
+Use .includes() to check whether the string "Hello World" contains "World".
+
+**4. Find the Index of a Substring**  
+Given "JavaScript is fun", find the index of "fun" using .indexOf().
+
+**5. Extract a Part of a String**  
+From "Programming", extract "gram" using .slice().
+
+**6. Replace a Word**  
+Replace "bad" with "good" in the string "This is a bad idea" using .replace().
+
+**7. Split a Sentence into Words**  
+Convert "I love coding in JS" into an array of words using .split(" ").
+
+**8. Check String Start and End**  
+Check if the string "JavaScript" starts with "Java" and ends with "Script" using .startsWith() and .endsWith().
+
+**9. Repeat a Word**  
+Print "Ha" 5 times using .repeat().
+
+**10. Trim Extra Spaces**  
+Remove spaces from " Hello World " using .trim().
+
+**11. Create a simple app that takes the user’s name and greets him/her after capitalizing the first letter of the user’s name and changing the rest of the letters into lowercase.**  
+(toUpperCase(), toLowerCase(), slice(), length property, stringConcatination)
+
+## ✅ Outputs
+
+#### 1. 
+```
+let str = "Hello";
+    console.log(str.length);
+```
+
+#### 2.
+```
+let strg = "JavaScript";
+    console.log(strg.toUpperCase()); 
+    console.log(strg.toLowerCase());
+```
+
+#### 3.
+```
+let text = "Hello World";
+    console.log(text.includes("World")); 
+```
+
+#### 4.
+```
+let substr = "JavaScript is fun";
+    console.log(substr.indexOf("fun"));
+```
+
+#### 5.
+```
+let word = "Programming";
+    console.log(word.slice(3,7));
+```
+
+#### 6.
+```
+let msg = "This is a bad idea";
+    console.log(msg.replace("bad", "good"));
+```
+
+#### 7.
+```
+let sentence = "I love coding in JS";
+    console.log(sentence.split(" "));
+  
+```
+
+#### 8. 
+```
+let strig = "JavaScript";
+    console.log(strig.startsWith("Java"));
+    console.log(strig.endsWith("Script"));
+```
+
+#### 9. 
+```
+console.log("Ha".repeat(5));
+```
+
+#### 10.
+```
+let txt = "   Hello World   ";
+    console.log(txt.trim());
+```
+
+#### 11.
+```
+
+let name = "aROMAL";
+let first = name[0].toUpperCase();
+let rest = name.slice(1).toLowerCase();
+let finalName = first + rest;
+    console.log("Hello " + finalName);
+```
+
 
 
 
