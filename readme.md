@@ -844,7 +844,7 @@ Remove spaces from " Hello World " using .trim().
 **11. Create a simple app that takes the user’s name and greets him/her after capitalizing the first letter of the user’s name and changing the rest of the letters into lowercase.**  
 (toUpperCase(), toLowerCase(), slice(), length property, stringConcatination)
 
-## ✅ Outputs
+## ✅ Output
 
 #### 1. 
 ```
