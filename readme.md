@@ -918,6 +918,315 @@ let finalName = first + rest;
     console.log("Hello " + finalName);
 ```
 
+## 06 Assignment
+#### <p>1. Write short notes on Array methods with a code example</p>
+<ul>
+<li>push()</li>
+<li>pop()</li>
+<li>shift()</li>
+<li>unshift()</li>
+<li>includes()</li>
+<li>toString()</li>
+<li>reverse()</li>
+<li>join()</li>
+<li>concat()</li>
+<li>flat()</li>
+<li>slice()</li>
+<li>splice()</li>
+<li>sort()</li>
+<li>fill()</li>
+</ul>
+
+## ✅ Output
+
+#### 1. push()
+<ul>
+<li>Adds one or more elements to the end of an array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, 2, 3];
+arr.push(4);
+console.log(arr); // [1, 2, 3, 4]
+```
+
+#### 2. pop()
+<ul>
+<li>Removes the last element of an array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, 2, 3];
+arr.pop();
+console.log(arr); // [1,2]
+```
+
+#### 3. shift()
+<ul>
+<li>Removes the first element from an array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [10, 20, 30];
+arr.shift();
+console.log(arr); // [20, 30]
+```
+
+#### 4. unshift()
+<ul>
+<li>Adds one or more elements to the beginning of an array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [20, 30];
+arr.unshift(10);
+console.log(arr); // [10, 20, 30]
+```
+
+#### 5. includes()
+<ul>
+<li>Checks if an array contains a specific value. Returns true or false.</li>
+</ul>
+
+##### Example :
+```
+let arr = ["apple", "banana"];
+console.log(arr.includes("banana")); // true
+```
+
+#### 6. toString()
+<ul>
+<li>Converts an array into a string.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, 2, 3];
+console.log(arr.toString()); // "1,2,3"
+```
+
+#### 7. reverse()
+<ul>
+<li>Reverses the order of array elements.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, 2, 3];
+arr.reverse();
+console.log(arr); // [3, 2, 1]
+```
+
+#### 8. join()
+<ul>
+<li>Joins all array elements into a string with a separator.</li>
+</ul>
+
+##### Example :
+```
+let arr = ["A", "B", "C"];
+console.log(arr.join("-")); // "A-B-C"
+```
+
+#### 9. concat()
+<ul>
+<li>Merges two or more arrays into a new array.</li>
+</ul>
+
+##### Example :
+```
+let a = [1, 2];
+let b = [3, 4];
+let c = a.concat(b);
+console.log(c); // [1, 2, 3, 4]
+```
+
+#### 10. flat()
+<ul>
+<li>Flattens nested arrays into a single array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, [2, 3], [4, [5]]];
+console.log(arr.flat(2)); // [1, 2, 3, 4, 5]
+```
+
+#### 11. slice()
+<ul>
+<li>Returns a portion of an array (does not modify original).</li>
+</ul>
+
+##### Example :
+```
+let arr = [10, 20, 30, 40];
+console.log(arr.slice(1, 3)); // [20, 30]
+```
+
+#### 12. splice()
+<ul>
+<li>Adds, removes, or replaces elements (modifies original array).</li>
+</ul>
+
+##### Example :
+```
+let arr = [10, 20, 30, 40];
+arr.splice(1, 2, 99);  
+console.log(arr); // [10, 99, 40]
+```
+
+#### 13. sort()
+<ul>
+<li>Sorts elements of an array.</li>
+</ul>
+
+##### Example :
+```
+let arr = [3, 1, 4, 2];
+arr.sort();
+console.log(arr); // [1, 2, 3, 4]
+```
+
+#### 14. fill()
+<ul>
+<li>Fills all or part of an array with a value.</li>
+</ul>
+
+##### Example :
+```
+let arr = [1, 2, 3, 4];
+arr.fill(0, 1, 3);
+console.log(arr); // [1, 0, 0, 4]
+```
+
+## 07 Assignment
+
+<p>1. Write a JavaScript function to check whether an `input` is an array.</p>
+<ul>(Array.isArray([1,2,3]))</ul>
+
+<p>2. Write a JavaScript function that takes an array as an argument and returns the first element of the array.</p>
+
+<p>3. Write a JavaScript function that takes an array as an argument and returns the last element of the array.</p>
+
+<p>4. Write a simple JavaScript function to join all elements of the following array into a string.</p>
+<ul>Sample array : myColor = ["Red", "Green", "White", "Black"];</ul>
+
+<p>5. Write a JavaScript program that accepts a number as input and inserts dashes (-) between each.</p> 
+<ul>For example : if you accept 925468 the output should be 9-2-5-4-6-8
+(toString().split().join())</ul>
+
+<p>6. Write a JavaScript function that checks if the given number is even or odd then returns a Boolean value (use: arrow function, return keyword, ternary operator)</p>
+
+<p>7. Create an array of guestList. Write a javascript function that takes the user’s name as an argument and checks whether it is in the guestlist. If yes, return the string “Welcome” else, return “Sorry, good luck next time”.</p>
+
+<p>8. Write a javascript function that reverses a given number.
+<ul>Example : 123456789 => 987654321 (toString(), split(), reverse (), join())</ul>
+
+<p>9. Write a JavaScript function that accepts a string as a parameter and converts the first letter into upper case.</p>
+<ul>Example : “javascript” => “Javascript”</ul>
+
+## ✅ Output
+
+#### 1.
+```
+function isArray(input) {
+  return Array.isArray(input);
+}
+console.log(isArray([1, 2, 3])); // true
+```
+
+#### 2. 
+```
+function firstElement(arr) {
+  return arr[0];
+}
+console.log(firstElement([10, 20, 30])); // 10
+```
+
+#### 3. 
+```
+function lastElement(arr) {
+  return arr[2];
+}
+console.log(lastElement([10, 20, 30])); // 30
+```
+
+#### 4.
+```
+let myColor = ["Red", "Green", "White", "Black"];
+
+function joinColors(colors) {
+  return colors.join(", ");
+}
+console.log(joinColors(myColor)); // Red, Green, White, Black
+```
+
+#### 5.
+```
+function dashNumber(num) {
+  return num.toString().split("").join("-");
+}
+console.log(dashNumber(925468)); // 9-2-5-4-6-8
+```
+
+#### 6.
+```
+let isEven = (num) => {
+  return num % 2 === 0 ? true : false;
+}
+console.log(isEven(10)); // true
+```
+
+#### 7.
+```
+let guestList = ["Aromal", "Leo", "Pedri", "Gavi"];
+
+function checkGuest(name) {
+  return guestList.includes(name) ? "Welcome" : "Sorry, good luck next time";
+}
+console.log(checkGuest("Aromal")); // Welcome
+console.log(checkGuest("Yamal"));  // Sorry, good luck next time
+```
+
+#### 8.
+```
+function reverseNumber(num) {
+  return Number(num.toString().split("").reverse().join(""));
+}
+console.log(reverseNumber(123456789)); // 987654321
+```
+
+#### 9.
+```
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+console.log(capitalize("javascript")); // Javascript
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
