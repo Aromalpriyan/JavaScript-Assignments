@@ -1456,7 +1456,7 @@ while(i <= 100){
 }
 ```
 
-## 10 Assignment
+## 09 Assignment
 
 #### <p>Create the below patterns using JavaScript</p>
 1. Square star pattern
