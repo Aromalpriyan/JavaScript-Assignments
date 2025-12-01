@@ -1208,6 +1208,499 @@ function capitalize(str) {
 console.log(capitalize("javascript")); // Javascript
 ```
 
+## 08 Assignment
+
+<p>1. Write short notes on the below with code examples</p>
+<ul>
+<li>while loop</li>
+<li>do-while loop</li>
+<li>for loop</li>
+<li>for in loop</li>
+<li>for of loop</li>
+</ul>
+<p>2. Print all the elements of an array.</p>
+<p>3. Print the odd numbers from 1 to 20.</p>
+<p>4. Find the sum of numbers from 1 to 100.</p>
+<p>5. Print the multiplication table of 5 using for loop.</p>
+<p>6. Reverse the given array [1,2,3,4,5] without using .reverse().</p>
+<p>7. Find the factorial of a given number n;</p>
+<p>8. Print each character of a string “javascript”.</p>
+<p>9. Write a function that checkes if the given number is even and return Boolean value.</p>
+<p>10. You are given an arr = [5,12,8,20,15,3]. Write a function that returns the count of numbers that are greater than 10.</p>
+<p>11. write a function that takes an array of numbers as an argument and returns the sum of its elements.</p>
+<p>12. Create a function that filters strings in an array by their length.</p>
+<p>13. Create a function that returns a new array containing the square roots of each number in the original array [1,4,9,16,25]
+(Math.sqrt())</p>
+<p>14. Create an array with 5 student’s names. Then create a function that takes two parameters (allStudents and studentName). Iterate over all the students and find that specific user ‘studentName’</p>
+<p>15. Write a function that prints the number 1 to 100. But for multiples of 3, print Fizz instead of the number, and for multiples of 5, print Buzz. For the numbers that are multiples of both 3 and 5, print FizzBuzz(use while loop)</p>
+
+## ✅ Output
+
+#### 1.
+<ul>
+<li>while loop</li>
+Runs as long as the condition is true.
+</ul>
+
+#### Example:
+
+```
+let i = 1;
+while(i <= 5){
+    console.log(i);
+    i++;
+}
+```
+<ul>
+<li>do–while loop</li>
+Runs the block at least once, then checks condition.
+</ul>
+
+#### Example:
+
+```
+let i = 1;
+do {
+    console.log(i);
+    i++;
+} while(i <= 5);
+```
+<ul>
+<li>for loop</li>
+Used when you know how many times to run.
+</ul>
+
+#### Example:
+
+```
+for(let i = 1; i <= 5; i++){
+    console.log(i);
+}
+```
+<ul>
+<li>for in loop</li>
+Used to loop over object properties or array indexes.
+</ul>
+
+#### Example:
+
+```
+let arr = [10,20,30];
+for(let index in arr){
+    console.log(index, arr[index]);
+}
+```
+<ul>
+<li>for of loop</li>
+Used to loop directly over array values.
+</ul>
+
+#### Example:
+
+```
+let arr = [10,20,30];
+for(let value of arr){
+    console.log(value);
+}
+```
+
+#### 2.
+```
+let arr = [1,2,3,4,5];
+for(let num of arr){
+    console.log(num);
+}
+```
+
+#### 3.
+```
+for(let i = 1; i <= 20; i++){
+    if(i % 2 !== 0){
+        console.log(i);
+    }
+}
+```
+
+#### 4.
+```
+let sum = 0;
+for(let i = 1; i <= 100; i++){
+    sum += i;
+}
+console.log(sum);
+```
+
+#### 5.
+```
+for(let i = 1; i <= 10; i++){
+    console.log(`5 x ${i} = ${5 * i}`);
+}
+```
+
+#### 6.
+```
+let arr = [1,2,3,4,5];
+let reversed = [];
+
+for(let i = arr.length - 1; i >= 0; i--){
+    reversed.push(arr[i]);
+}
+console.log(reversed);
+```
+
+#### 7. 
+```
+function factorial(n){
+    let result = 1;
+    for(let i = 1; i <= n; i++){
+        result *= i;
+    }
+    return result;
+}
+console.log(factorial(5)); // 120
+```
+
+#### 8.
+```
+let str = "javascript";
+for(let char of str){
+    console.log(char);
+}
+```
+
+#### 9.
+```
+function isEven(num){
+    return num % 2 === 0;
+}
+console.log(isEven(10)); // true
+console.log(isEven(7));  // false
+```
+
+#### 10.
+```
+function countGreaterThan10(arr){
+    let count = 0;
+    for(let num of arr){
+        if(num > 10) 
+        count++;
+    }
+    return count;
+}
+let arr = [5,12,8,20,15,3];
+console.log(countGreaterThan10(arr)); // 3
+```
+
+#### 11.
+```
+function sumArray(arr){
+    let sum = 0;
+    for(let num of arr){
+        sum += num;
+    }
+    return sum;
+}
+console.log(sumArray([1,2,3,4,5])); // 15
+```
+
+#### 12.
+```
+function filterByLength(arr, length){
+    return arr.filter(str => str.length === length);
+}
+console.log(filterByLength(["hi","hello","yes","no"], 2));
+// ["hi","no"]
+```
+
+#### 13.
+```
+let numbers = [1,4,9,16,25];
+
+function squareRoots(arr){
+    return arr.map(num => Math.sqrt(num));
+}
+console.log(squareRoots(numbers)); // [1,2,3,4,5]
+```
+
+#### 14.
+```
+let students = ["Aromal", "Leo", "Pedri", "Gavi", "Olma"];
+
+function findStudent(allStudents, studentName){
+    for(let student of allStudents){
+        if(student === studentName){
+            return "Student Found";
+        }
+    }
+    return "Student Not Found";
+}
+console.log(findStudent(students, "Leo"));
+```
+
+#### 15.
+```
+
+let i = 1;
+
+while(i <= 100){
+    if(i % 3 === 0 && i % 5 === 0){
+        console.log("FizzBuzz");
+    } else if(i % 3 === 0){
+        console.log("Fizz");
+    } else if(i % 5 === 0){
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+    i++;
+}
+```
+
+## 10 Assignment
+
+#### <p>Create the below patterns using JavaScript</p>
+1. Square star pattern
+
+<ul>
+
+![image](./Pic%2001(Ass09).png)
+
+</ul>
+
+2. Left triangle pattern
+
+<ul>
+
+![image](./Pic%2002(Ass09).png)
+
+</ul>
+ 
+3. Inverted left triangle pattern
+
+<ul>
+
+![image](./Pic%2003(.Ass09).png)
+
+</ul>
+     
+4. Right angle pattern
+
+<ul>
+
+![image](./Pic%2004(Ass09).png)
+
+</ul>
+ 
+5. Inverted right angle pattern
+
+<ul>
+
+![image](./Pic%2005(Ass09).png)
+
+</ul>
+
+6. Pyramid
+
+<ul>
+
+![image](./Pic%2006(Ass09).png)
+
+</ul>
+ 
+7. Inverted pyramid
+
+<ul>
+
+![image](./Pic%2007(Ass09).png)
+
+</ul>
+ 
+8. Square number pattern
+
+<ul>
+
+![image](./Pic%2008(Ass09).png)
+
+</ul>
+ 
+9. Square number pattern
+
+<ul>
+
+![image](./Pic%2009(Ass09).png)
+
+</ul>
+ 
+10. hollow square pattern
+
+<ul>
+
+![image](./Pic%2010(Ass09).png)
+
+</ul> 
+
+## ✅ Output
+
+#### 1.
+```
+let n = 5
+let str = ""
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= n; j++){
+        str += "* "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 2.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= i; j++){
+        str += "* "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 3.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= n-i+1 ; j++){
+        str += "* "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 4.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(k = 1; k <= n-i; k++){
+        str += " "
+    }
+    for(j = 1; j <= i ; j++){
+        str += "*"
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 5.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(k = 1; k <= i-1; k++){
+        str += " "
+    }
+    for(j = 1; j <= n-i+1 ; j++){
+        str += "*"
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 6.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(k = 1; k <= n-i; k++){
+        str += " "
+    }
+    for(j = 1; j <= i ; j++){
+        str += "* "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 7.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(k = 1; k <= i-1; k++){
+        str += " "
+    }
+    for(j = 1; j <= n-i+1 ; j++){
+        str += "* "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 8.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= n; j++){
+        str += i + " "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 9.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= n; j++){
+        str += j + " "
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+#### 10.
+```
+let n = 5
+let str = ""
+
+for(i = 1; i <= n; i++){
+    for(j = 1; j <= n; j++){
+      if(i === 1 || i === 5 || j === 1 || j === 5){
+        str += "* "
+      }else{
+        str += " " + " "
+      }
+    }
+    str += "\n"
+}
+console.log(str);
+```
+
+
+
+
+
+
 
 
 
