@@ -1696,11 +1696,318 @@ for(i = 1; i <= n; i++){
 console.log(str);
 ```
 
+## 10 Assignment
 
+<p>1. Explain scope in JavaScript with example?</p>
+<p>2. What is callback function?</p>
+<p>3. Explain higherorder function?</p>
+<p>4. What is hollysting in JavaScript?</p>
+<p>5. Explain lexical environment?</p>
+<p>6. Explain closuer with example?</p>
+<p>7. What is scope chaining?</p>
+<p>8. What is the differnce between undefined , not defined and null?</p>
+<p>9. Explain spread and rest operator with example?</p>
+<p>10. Explain this keyword in JavaScript?</p>
+<p>11. Explain the below array methods with code examples?</p>
+<ul>
+<li>1. every method</li>
+<li>2. some</li>
+<li>3. filter</li>
+<li>4. map</li>
+<li>5. for each</li>
+<li>6. reduce method</li>
+</ul>
 
+## ✅ Output
 
+#### 1. Scope means where a variable is accessible.
 
+#### Types:
 
+<ul>
+<li>Global Scope → Can be used anywhere.</li>
+<li>Function Scope → Variables declared inside a function are available only inside that function.
+</li>
+<li>Block Scope (let, const) → Accessible only inside {} block.
+</li>
+</ul>
+
+#### Example :
+```
+let a = 10; // global scope
+
+function test() {
+  let b = 20; // function scope
+  if (true) {
+    let c = 30; // block scope
+  }
+  console.log(b); 
+}
+```
+
+#### 2. A callback function is a function passed as an argument to another function, and executed later.
+
+#### Example :
+```
+function greet(name,callback) {
+  console.log("Hello " + name);
+  callback();
+}
+
+greet("Aromal", function() {
+  console.log("Welcome!");
+});
+```
+
+#### 3. A higher-order function is a function that:
+<ul>
+<li>takes another function as argument , or</li>
+<li>returns a function</li>
+</ul>
+
+#### Example :
+```
+function higher(fn) {
+  return fn();
+}
+
+higher(() => console.log("I am a callback"));
+```
+
+#### 4. Hoisting is JavaScript’s default behavior of moving variable & function declarations to the top of their scope before execution.
+
+#### Example :
+
+```
+console.log(a);  // undefined
+var a = 10;
+```
+
+#### Functions are hoisted completely:
+```
+sayHello(); // works
+function sayHello() {
+  console.log("Hello");
+}
+```
+
+#### 5. A lexical environment contains :
+
+<ul>
+<li>Local variables</li>
+<li>Reference to its outer environment</li>
+</ul>
+
+#### It is created whenever a function is created.
+
+#### Example :
+```
+let outerFunction = ()=> {
+    let firstName = "Jhon"
+    let innerFunction = () => {
+        let lastName = "wick"
+        console.log(firstName + " " + lastName);
+    }
+    innerFunction()
+}
+outerFunction()
+```
+
+#### 6. Closuer is the ability of javaScript where the inner function have an access of all the variables that are declared in the outer function .
+
+#### Example :
+```
+function outer() {
+  let count = 0;
+
+  return function() {
+    count++;
+    console.log(count);
+  };
+}
+
+let counter = outer();
+counter(); // 1
+counter(); // 2
+```
+
+#### 7. When trying to access a variable, JavaScript checks:
+
+<ul>
+<li>Local scope</li>
+<li>Outer function scope</li>
+<li>Global scope</li>
+</ul>
+
+#### This chain is called scope chain.
+
+#### Example :
+```
+let a = 10;
+
+function outer() {
+  let b = 20;
+
+  function inner() {
+    let c = 30;
+    console.log(a, b, c);
+  }
+  inner();
+}
+outer();
+```
+
+#### 8.
+<ul>
+<li>undefined</li>
+Variable declared but no value assigned
+<li>not defined</li>
+Variable does NOT exist at all
+<li>null</li>	
+Intentional empty value (developer set it manually)
+</ul>
+
+#### Example :
+```
+let a;
+console.log(a); // undefined
+
+console.log(b); // ReferenceError: b is not defined
+
+let c = null;
+console.log(c); // null
+```
+
+#### 9. Both use ... (three dots) but have different uses.
+
+#### Example:
+#### spread operator
+```
+let arr =[1,2,3,4,5]
+
+let newArr = [...arr, 6,7,8,9,10]
+
+console.log(newArr);
+```
+#### rest operator
+```
+let sum = (a,b,...rest) => {
+    console.log(a);
+    console.log(b);
+    console.log(rest);
+}
+sum(10,5,1,2,3,4)
+```
+
+#### 10. this refers to the object that is calling the function.
+
+#### Example :
+```
+let obj = {
+    userName:"John", 
+    email:"user1@gmail.com",
+    role:"Student",
+    age:21,
+    coursecount: 3,
+    isLoggedIn:false,
+    PaymentMode:undefined,
+    sayCourseCount: function count(){
+        console.log(this.coursecount);
+    }
+}
+obj.sayCourseCount()
+```
+
+#### 11.
+#### 1. every()
+<ul>
+<li>Checks if all elements satisfy a condition.</li>
+</ul>
+
+#### Example :
+```
+let arr = [1,2,3,4,5,6,7,8,9]
+
+let result = arr.every((item) => {
+
+    return item % 2 !== 0
+})
+console.log(result);
+```
+
+#### 2. some()
+<ul>
+<li>Checks if at least one element satisfies a condition.</li>
+</ul>
+
+#### Example :
+```
+let arr = [1,6,4,8]
+
+let result = arr.some((item) => {
+
+    return item % 2 !== 0
+})
+console.log(result);
+```
+
+#### 3. filter()
+<ul>
+<li>Returns only the items that satisfy a condition.</li>
+</ul>
+
+#### Example :
+```
+let arr = [1,2,3,4,5,6,7,8,9];
+
+let evenArr = arr.filter((item)=>{
+    return item % 2 == 0
+})
+
+console.log(evenArr);
+```
+
+#### 4. map()
+<ul>
+<li>Creates a new array by applying a function to each element.
+</li>
+</ul>
+
+#### Example :
+```
+let collection = ["kids","toys","furniture","ladies","mens","clock"]
+
+  collection.map((item) => {
+    console.log(item);
+  })
+```
+
+#### 5. forEach()
+<ul>
+<li>Runs a function for each element (no return).</li>
+</ul>
+
+#### Example :
+```
+let nums = [10, 20, 30];
+
+nums.forEach(n => console.log(n));
+```
+
+#### 6. reduce()
+<ul>
+<li>Reduces array to a single value (sum, product, etc.)</li>
+</ul>
+
+#### Example :
+```
+let arr = [100,20,10,5]
+
+let output= arr.reduce((accumulator, amount) => {
+    return accumulator+amount
+})
+console.log(output);
+```
 
 
 
